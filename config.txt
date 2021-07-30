@@ -1,2 +1,2 @@
-CONTAINER_TAG=
-MY_IMAGE=
+CONTAINER_TAG=container_tag
+MY_IMAGE=quay.io/centos/centos
