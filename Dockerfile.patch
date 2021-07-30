@@ -1,0 +1,17 @@
+ARG MY_IMAGE=ocp_image
+
+FROM $MY_IMAGE
+
+ARG PATCH_LIST=patch-list.txt
+ENV PATCH_FILE="${PATCH_LIST}"
+
+COPY "${PATCH_FILE}" /tmp/
+COPY patch-image.sh /bin/
+
+RUN echo "patch list file: ${PATCH_FILE}" \
+ && dnf install -y git python3 python3-pip \
+ && /bin/patch-image.sh \
+ && rm -f /bin/patch-image.sh \
+ && dnf clean all \
+ && rm -rf /var/cache/{yum,dnf}/*
+
