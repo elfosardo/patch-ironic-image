@@ -24,6 +24,10 @@ do
 
     SKIP_GENERATE_AUTHORS=1 SKIP_WRITE_GIT_CHANGELOG=1 python3 setup.py sdist
     pip3 install --prefix /usr dist/*.tar.gz
+
+    # clean local repo
+    cd ..
+    rm -fr "$PROJ_NAME"
 done < "$patch_file"
 
 cd /
