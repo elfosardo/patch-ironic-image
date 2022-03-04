@@ -51,6 +51,11 @@ do
             rm -f "$PATCH_FILE"
             ;;
 
+        *)
+            echo "$EXEC operation not supported, closing."
+            exit 1
+            ;;
+
     esac
 
 done < "$patch_file"
