@@ -1,1 +1,3 @@
+PATCH openstack/sushy https://review.opendev.org/changes/openstack%2Fsushy~830553/revisions/13/patch?zip
+PATCH openstack/sushy https://review.opendev.org/changes/openstack%2Fsushy~831355/revisions/1/patch?zip
 PATCH openstack/sushy https://review.opendev.org/changes/openstack%2Fsushy~830322/revisions/12/patch?zip
