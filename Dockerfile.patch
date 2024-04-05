@@ -3,7 +3,7 @@ ARG MY_IMAGE=ocp_image
 FROM $MY_IMAGE
 
 ARG PATCH_LIST=patch-list.txt
-ARG REPO_LIST=ubi8.repo
+ARG REPO_LIST=ubi9.repo
 ENV PATCH_FILE="${PATCH_LIST}"
 ENV REPO_FILE="${REPO_LIST}"
 
